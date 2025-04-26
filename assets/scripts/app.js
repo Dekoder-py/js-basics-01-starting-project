@@ -1,8 +1,12 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
 
+function getUserNumInput() {
+	return parseInt(userInput.value);
+}
+
 function add() {
-	const enteredNum = parseInt(userInput.value);
+	const enteredNum = getUserNumInput();
 	const calcDesc = `${currentResult} + ${enteredNum}`;
 	currentResult = currentResult + enteredNum;
 	outputResult(currentResult, calcDesc);
