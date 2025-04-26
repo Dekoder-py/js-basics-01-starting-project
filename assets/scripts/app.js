@@ -5,18 +5,23 @@ function getUserNumInput() {
 	return parseInt(userInput.value);
 }
 
+function createAndWriteOutput(operator, resultBefore, calcNum) {
+	const calcDesc = `${currentResult} ${operator} ${calcNum}`;
+	outputResult(currentResult, calcDesc);
+}
+
 function add() {
 	const enteredNum = getUserNumInput();
-	const calcDesc = `${currentResult} + ${enteredNum}`;
+	const initialResult = currentResult;
 	currentResult = currentResult + enteredNum;
-	outputResult(currentResult, calcDesc);
+	createAndWriteOutput('+', initialResult, enteredNum);
 }
 
 function subtract() {
 	const enteredNum = getUserNumInput();
-	const calcDesc = `${currentResult} - ${enteredNum}`;
+	const initialResult = currentResult;
 	currentResult = currentResult - enteredNum;
-	outputResult(currentResult, calcDesc);
+	createAndWriteOutput('-', initialResult, enteredNum);
 }
 
 addBtn.addEventListener('click', add);
