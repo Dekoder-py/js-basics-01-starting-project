@@ -12,4 +12,12 @@ function add() {
 	outputResult(currentResult, calcDesc);
 }
 
+function subtract() {
+	const enteredNum = getUserNumInput();
+	const calcDesc = `${currentResult} - ${enteredNum}`;
+	currentResult = currentResult - enteredNum;
+	outputResult(currentResult, calcDesc);
+}
+
 addBtn.addEventListener('click', add);
+subtractBtn.addEventListener('click', subtract);
