@@ -13,28 +13,28 @@ function createAndWriteOutput(operator, resultBefore, calcNum) {
 function add() {
 	const enteredNum = getUserNumInput();
 	const initialResult = currentResult;
-	currentResult = currentResult + enteredNum;
+	currentResult += enteredNum;
 	createAndWriteOutput('+', initialResult, enteredNum);
 }
 
 function subtract() {
 	const enteredNum = getUserNumInput();
 	const initialResult = currentResult;
-	currentResult = currentResult - enteredNum;
+	currentResult -= enteredNum;
 	createAndWriteOutput('-', initialResult, enteredNum);
 }
 
 function multiply() {
 	const enteredNum = getUserNumInput();
 	const initialResult = currentResult;
-	currentResult = currentResult * enteredNum;
+	currentResult *= enteredNum;
 	createAndWriteOutput('*', initialResult, enteredNum);
 }
 
 function divide() {
 	const enteredNum = getUserNumInput();
 	const initialResult = currentResult;
-	currentResult = currentResult / enteredNum;
+	currentResult /= enteredNum;
 	createAndWriteOutput('/', initialResult, enteredNum);
 }
 
